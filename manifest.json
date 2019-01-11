@@ -1,7 +1,7 @@
 {
   "name": "Weather Lite",
   "short_name": "Weather Lite",
-  "start_url": "https://rm-jn.github.io/m-pwa-weather/",
+  "start_url": "/m-pwa-weather/",
   "display": "standalone",
   "theme_color": "#ef4e2a",
   "background_color": "#fff",
