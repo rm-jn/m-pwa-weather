@@ -32,13 +32,13 @@ self.addEventListener('fetch', function (e) {
   );
 });
 
-caches.open('myonsenuiapp').then(cache => {
-  return cache.addAll([
-    '/',
-    '/index.html',
-    '/manifest.json',
-    'https://unpkg.com/onsenui/css/onsenui.min.css',
-    'https://unpkg.com/onsenui/css/onsen-css-components.min.css',
-    'https://unpkg.com/onsenui/js/onsenui.min.js'
-  ]);
-})
+// caches.open('myonsenuiapp').then(cache => {
+//   return cache.addAll([
+//     '/',
+//     '/index.html',
+//     '/manifest.json',
+//     'https://unpkg.com/onsenui/css/onsenui.min.css',
+//     'https://unpkg.com/onsenui/css/onsen-css-components.min.css',
+//     'https://unpkg.com/onsenui/js/onsenui.min.js'
+//   ]);
+// })
