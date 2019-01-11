@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="./manifest.json">
 
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.min.css">
   <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
@@ -10,7 +10,7 @@
 
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
+      navigator.serviceWorker.register('./sw.js')
         .then(() => console.log("Service Worker Registered"))
         .catch(e => console.log(e));
     }

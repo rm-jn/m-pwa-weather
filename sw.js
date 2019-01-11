@@ -12,8 +12,9 @@ self.addEventListener('install', function (e) {
       // If the request for any of these resources fails, _none_ of the resources will be
       // added to the cache.
       return cache.addAll([
-        '/',
-        '/index.html',
+        'https://rm-jn.github.io/m-pwa-weather/',
+        'https://rm-jn.github.io/m-pwa-weather/manifest.json',
+        'https://rm-jn.github.io/m-pwa-weather/index.html',
         'https://unpkg.com/onsenui/css/onsenui.min.css',
         'https://unpkg.com/onsenui/css/onsen-css-components.min.css',
         'https://unpkg.com/onsenui/js/onsenui.min.js'
@@ -34,9 +35,9 @@ self.addEventListener('fetch', function (e) {
 
 // caches.open('myonsenuiapp').then(cache => {
 //   return cache.addAll([
-//     '/',
-//     '/index.html',
-//     '/manifest.json',
+//     'https://rm-jn.github.io/m-pwa-weather/',
+//     'https://rm-jn.github.io/m-pwa-weather/index.html',
+//     'https://rm-jn.github.io/m-pwa-weather/manifest.json',
 //     'https://unpkg.com/onsenui/css/onsenui.min.css',
 //     'https://unpkg.com/onsenui/css/onsen-css-components.min.css',
 //     'https://unpkg.com/onsenui/js/onsenui.min.js'
