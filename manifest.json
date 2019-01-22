@@ -1,6 +1,6 @@
 {
-  "name": "Weather Lite",
-  "short_name": "Weather Lite",
+  "name": "Weather PWA",
+  "short_name": "Weather PWA",
   "start_url": "/m-pwa-weather/",
   "display": "standalone",
   "theme_color": "#ef4e2a",

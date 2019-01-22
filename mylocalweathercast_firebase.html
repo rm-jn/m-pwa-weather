@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Firebase Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="ctn">
+    <button onclick="read()">Read</button>
+    <div class="raw-info-ctn">
+      <div class="raw-info-status">Not Read</div>
+      <div class="raw-info" style="max-height: 80px; overflow: hidden" onclick="toggleRawInfoExpand()"></div>
+    </div>
+  </div>
+
+  <!-- JS Stuff -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script>
+    var firebase_data = null
+    function read() {
+      console.log('Reading')
+      $.ajax({
+        url: 'https://www.pushtable.com/api/firestore/m-weather-pwa/?auth=105651587235388885317-or0v6oqfpgg7esg9m0qnw.m',
+        success: function(result) {
+          firebase_data = result
+          var now = new Date()
+          $('.raw-info-status').innerHTML = `Last read: ${now.toTimeString().split(' ')[0]}`
+          $('.raw-info').innerHTML = JSON.stringify(result, null, 2)
+        }
+      })
+    }
+
+    function toggleRawInfoExpand() {
+      $('.raw-info').toggle()
+    }
+  </script>
+</body>
+
+</html>
